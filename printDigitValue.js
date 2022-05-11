@@ -1,7 +1,7 @@
 function printDigitValue(str){
 	let number = 10;
 	let result ='';
-	let nol = '0';
+	
 	for(var i = 0; i < str.length ; i++){
 		if(str[i] < number){
 			result += str[i];
@@ -9,9 +9,14 @@ function printDigitValue(str){
 	}
 
 	console.log(result);
+	let hasil = '';
 
 	for (var i = 0; i < result.length; i++){
-			console.log(result[i]);
+		hasil = result[i];
+		for(var j = result.length-1; j > i; j--){
+			hasil+='0'
+		}
+		console.log(hasil)
 	}
 	
 }
